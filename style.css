@@ -1,0 +1,2397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');  /*(font-family: "Roboto Condensed", sans-serif;)*/
+/*fonte importada do google fonts */
+
+/*retirar a margem padrão do navegador "CSS reset" */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+header {
+  margin: 0;
+  top: 0;
+}
+
+main{
+  padding: 20px;
+  margin-left: 8%;
+}
+
+
+p {
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: justify;
+  hyphens: auto;
+  margin-right: 11%;
+  margin-left: 3%;
+  line-height: 1.4;
+  word-wrap: break-word; 
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+
+/*titulos dos textos */
+h1 {
+
+  margin-left: 3%;                          
+  text-align: left;                                                 
+  font-size: 20px;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-bottom: 1%; 
+  margin-top: 2%;
+}
+
+h2{
+  text-align: center;  
+  font-size: 20px;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1%; 
+  margin-top: 2%;
+}
+
+
+/*seção de musicas*/
+.container-play {
+  display: flex; /* Alinha os itens em linha */
+  flex-direction: column; /* Adiciona quebra automática */
+  gap: 20px; /* Espaço entre os botões */
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+.musicas {
+  display: flex; /* Alinha imagem e texto lado a lado */
+  align-items: center; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/*imagem do card*/
+.musicas img {
+  width: 90px; /* Define tamanho fixo */
+  height: 90px; /* Define tamanho fixo */
+  border-radius: 50%; /* Torna a imagem circular */
+  border: 2px solid #f87777; /* Adiciona borda arredondada */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+.musicas img:hover{
+  transform: scale(1.2); /* Aumenta a imagem em 20% */
+}
+ 
+
+/*texto do card*/
+.musicas p {
+  font-size: 18px; /* Aumenta o texto para melhor visualização */
+  color: #333;
+  font-weight: bold;
+}
+
+
+.fraseplaylist{
+font-size: 22px;
+font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+color: #0a0b57;
+font-weight: bolder;
+margin-top: 2%;
+text-align: center;
+}
+
+
+.bodymusica {
+  position: relative;
+  padding: 20px;
+  min-height: 100vh; /* Garante que o fundo cubra toda a altura da janela */
+}
+
+.bodymusica::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imagens do site/fundo3.jpeg");
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  opacity: 0.3; /* Ajusta a opacidade */
+  z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+}
+
+.menu-playlist{
+  position: absolute;
+  top: 60px;
+  width: 100%; /* Garante que o menu ocupe toda a largura da página */
+  display: flex; /* Para centralizar os itens com flexbox */
+  justify-content: center; /* Centraliza o menu horizontalmente */
+  z-index: 2;
+}
+
+/*frase solicitando para clicar*/
+.clique {
+  margin-left: 3%;
+  font-size: 18px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 3%;
+  font-weight: bold;
+  margin-top: 3%;
+}
+
+
+/*titulos das receitas"*/
+h3{
+  color: rgb(253, 252, 251);
+  background-color: #e66108;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 3%;
+  margin-bottom: 1%;
+  width: calc(20% - 7px);                                                     /*alinha o background */
+}
+
+ /*TITULO DA PAGINA    - não mexer*/
+.titulo{
+  font-size: 65px;
+  position:absolute;
+  width: 100%;
+  padding: 0;                                                              /* Opcional: para adicionar algum espaçamento interno */
+  color: #e7190a;
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  z-index: 1;
+  margin-top: 30px;
+  }
+
+ /*TITULO DA PAGINA    - não mexer*/
+.logo1{
+  width: 67px;
+  border-radius: 47% 47% 2% 22% ;                                           /*bordas do logotipo*/
+  height: auto;                                                             /* Altura automática para manter a proporção */
+  margin-right: 10px;                                                       /* Espaçamento entre a imagem e o texto */
+  z-index: 1;
+  border: 2px solid #f76e11;
+  margin-bottom: 1%;
+  margin-top: 4px;
+  margin-left: 2%;
+  }
+ 
+  
+/*IMAGENS DO CABEÇALHO DAS PAGINAS - não mexer (inicial, */
+.imagemInicial{
+  background-image: url(imagens\ do\ site/inicial3.png);
+  height: 195px;                                                      
+  width: 100%;
+  background-size: cover;                                                 /* Ajusta o tamanho da imagem para cobrir todo o cabeçalho */
+  padding: 0px;
+  background-position: 50% 5%;
+  opacity: 39%;
+  z-index: -1;                                                            /* Garante que fique atrás do conteúdo */
+}
+
+.imagemReceitas {
+  background-image: url(imagens\ do\ site/ingredientes3.jpeg);
+  height: 195px;                                                     
+  width: 100%;
+  background-size: cover;                                             
+  padding: 0px;
+  opacity: 39%;
+}
+
+.imagemDicas {
+  margin-top: 0;
+  height: 135px;                                                             /* Altura desejada para o cabeçalho */
+  width: 100%;
+  background-size: cover;                                                   /* Ajusta o tamanho da imagem para cobrir todo o cabeçalho */
+  padding: 11px;
+  background-color: #ff9f45;
+  opacity: 59%;
+}
+
+
+.imagemLocal {
+  height: 195px;                                                           /* Altura desejada para o cabeçalho */
+  width: 100%;
+  background-size: cover;                                                 /* Ajusta o tamanho da imagem para cobrir todo o cabeçalho */
+  background-color: #ff9f45;
+  opacity: 59%;
+ }
+ 
+
+.imagemForm {
+  margin-top: 0;
+  background-image: url(imagens\ do\ site/formulario.png);
+  height: 190px;                                        
+  width: 100%;
+  background-size: cover;                                 
+  padding: 11px;
+  background-position: 50% 40%;                                           /*centraliza a imagem na parte desejada, usando a porcentagem ou center*/
+ }
+
+ 
+
+/*CRIADO POR..*/
+.footer-content {
+  background-color: #f76e11;
+  padding: 5px 0;                                                   /* Adiciona preenchimento na parte superior e inferior para obter algum espaçamento */
+  text-align: center;
+  width: 100%;
+
+}
+
+.criado {
+  color: #fff; 
+  display: inline-block; 
+  vertical-align: middle;                                             /* Alinha o texto verticalmente no meio */
+  margin: 0 auto;                                                     /* Centraliza o elemento do bloco */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.contato{
+  font-size: 20px;
+  margin-left: 12%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -2%;
+  margin-top: 1px;
+  font-weight: bolder;
+}
+
+
+/*Linkedin*/
+.linkedin {
+  color: #240cac;
+  display: inline-block; 
+  margin-left: 12%;
+  margin-right: 3px;
+  margin-bottom: -1px;
+  justify-content: flex-start; 
+}
+
+
+.github {
+  color: black;
+  display: inline-block; 
+  margin-left: 1%;
+  margin-bottom: 1%;
+  margin-right: 3px;
+  justify-content: flex-start;  
+  margin-top: 10px;
+}
+
+.email{
+  color: black;
+  display: inline-block; 
+  margin-left: 1%;
+  margin-bottom: -1px;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+}
+
+/*BOTÕES */
+/*botão para musicas no Youtube e para o formulário*/
+.button1 { 
+  text-decoration: none;                                                /* Remove o sublinhado */
+  padding: 10px 20px;                                                   /* Adiciona preenchimento ao botão */
+  background-color: #f76e11; 
+  color: #fff;
+  border-radius: 5px;                                                   /* Adiciona bordas arredondadas ao botão */
+  display: inline-block;                                                /* Garante que o botão se comporte como um elemento de bloco */
+  font-size: 18px;
+  margin-bottom: 5px;                                                   /* Espaçamento entre os botões */
+  margin-left: 3%;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: pulse 1.5s infinite; /* Animação pulsante */
+  transition: transform 0.3s ease, background-color 0.3s ease;/* Transição suave */
+}
+
+.button1:hover {
+  background-color: #ca4507; 
+  transform: scale(1.1); 
+  box-shadow: 6px 6px 8px rgba(12, 11, 11, 0.1); /* Adiciona sombra */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta o tamanho do botão no meio da animação */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* frases "soltas" da pagina*/
+.frase {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 3%; 
+  margin-left: 3%;
+  line-height: 1.5;
+  margin-right: 23%;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* PAGINA HOME */
+
+  /*imagem e texto sobre a historia da culinaria   - */
+
+
+.card{
+  overflow: hidden;                                                     /* Limpa o float */
+  margin-left: 2%;
+  margin-bottom: 4%;     
+  line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
+  margin-top: 1.6%;
+
+}
+
+/* cor de fundo que envolve os textos da pagina Home - VERIFICAR PERMANENCIA*/
+
+.container-textoPrincipal{
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 76%; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color:rgb(250, 170, 132);
+  margin-left: 3%;
+  margin-right: 5%; 
+  margin-bottom: 3%;
+}
+
+/*imagens da pagina Home*/
+
+
+.image2{
+
+  float: left;   
+  display: block;                                                    /* Faz a imagem flutuar à esquerda */
+  margin-right: 10px;                                                 /* Espaçamento entre a imagem e o texto */
+  height: 340px;
+  width: 25%;
+  margin-left: 3%; 
+  margin-top: 0;  
+  padding: 0 12px 12px 0;
+}
+
+ /*introdução da pagina*/
+.bemVindo{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 3%;
+  white-space: normal;
+  line-height: 1.5;
+  margin-bottom: 3%;   
+  margin-top: 1%;
+  font-family: Arial, Helvetica, sans-serif; 
+  margin-right: 22%; 
+  hyphens: auto;
+}
+
+
+/* PAGINA RECEITA*/
+.subtituloReceitas {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-left: 3%;
+  color: #ca4507;
+  margin-bottom: 3%;
+}
+
+
+/*imagem das receitas*/
+.imgAreceita {
+  height: 170px;
+  margin-bottom: 10px;
+  margin-left: 3%;
+  width: 30%; 
+  display: block;
+}
+
+
+/*botoes retrateis das receitas*/
+.receita{ 
+  margin-bottom: 10px; 
+  padding: 10px;
+  border-radius: 5px;
+  background:#e5c89b;
+  margin-left: 3%;
+  border: 1px solid #f76e11;                                                /*borda do campo de receitas */
+  display: block;
+  box-sizing: border-box;                                                     /* faz com que o padding seja incluído na largura total do elemento */
+  width: calc(98% - 2%);                                                      /* largura automática para se ajustar ao conteúdo */
+  overflow: hidden;                                                           /* evita que o conteúdo ultrapasse a borda */
+  width: 70%;
+}
+
+
+/*lista do preparo das receitas */
+.preparo{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 1%;
+  margin-right: 8%;
+  margin-bottom: 5%;
+  padding: 0; 
+  box-sizing: border-box; 
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+}
+
+
+.preparo ol {
+  padding-left: 20px;                                                       /* ajuste do recuo da lista */
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-position: inside;                                              /* posiciona os números da lista dentro do contêiner */
+}
+
+.preparo li {
+  margin-bottom: 15px; 
+  word-wrap: break-word;                                                    /* permite quebra de linha automática para evitar ultrapassar a borda */
+}
+
+
+/* lista de ingredientes das receitas */
+.ingredientes{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 4%;
+  margin-right: 10%;
+  white-space: pre-line;                                                  /* Mantém as quebras de linha */
+  text-align: justify;
+  hyphens: auto;
+
+}
+
+.ingredientes span {
+  display: block;                                                         /* Cada item de ingrediente em um novo bloco */
+  margin-bottom: 2px; 
+}
+
+
+/*botão retratil das receitas e das dicas */
+.content{
+  display: none;                                                        /* Inicialmente escondemos o conteúdo do botão retrátil */
+  margin-top: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f76e11;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #ca4507;
+}
+
+
+/*PAGINA LOCAL */
+.mapa iframe {
+  margin-left: 3%;
+  margin-bottom: 3%; 
+  width: 60%;
+  height: 310px;
+ 
+}
+
+
+
+/* PAGINA DE DICAS*/
+.video iframe { /*refe-se a tag video*/
+  width: 45%; 
+  height: 350px; 
+  object-fit: cover;                                                        /* ajusta o vídeo dentro da área especificada */
+  margin-left: 3%;
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+
+/*texto e layout das dicas*/
+.asDicas {
+  margin-bottom: 9px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background: #e5c89b;
+  margin-left: 3%;
+  border: 1px solid #f76e11;
+  display: inline-table;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  hyphens: auto;
+}
+
+
+/*CREDITOS */
+/*texto do video*/
+.creditos {
+  text-align: left;
+  margin-left: 3%;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.creditosImg {
+  margin-top: -2%;
+  display: block;   
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 3%;
+  float: left; 
+  flex-direction: column; /* Alinha os itens na vertical */
+}
+
+
+
+ /*FORMULARIO  */
+/* Mostrar elementos se um radio button específico estiver selecionado */
+#dica:checked ~ #dicaFields {
+  display: block;
+}
+
+#receita:checked ~ #receitaFields {
+  display: block;
+}
+
+
+/* Estilização para o botão de enviar */
+input[type="submit"] {
+  padding: 10px 10px;
+  background-color: #f76e11;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 3%;
+  width: 72px;                                                               /* Define uma largura específica para o botão */
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5%;
+}
+
+input[type="submit"]:hover {
+  background-color: #ca4507;
+}
+
+
+/*borda do formulário*/
+.bordaForm {
+  margin-top: 2%;
+  margin-bottom: 14px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: #e5c89b;
+  margin-left: 1%;
+  margin-right: 2%;
+  border: 1px solid #f76e11;
+  display: block;
+  width: 55%;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*texto para de escolha entre dica e receita do formulário*/
+.escolha {
+  margin-bottom: 1px;
+  margin-left: 3%;
+  font-size: 18px;
+}
+
+
+/* Estilizando todos os campos de escrita do formulario*/
+input[type="text"],
+input[type="number"],
+textarea, .form-group select {
+  display: block;
+  margin: 10px 3%;
+  padding: 8px;
+  width: 64%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  border: 1px solid #f76e11;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* borda dos campos de texto na cor laranja AO clicar no campo*/
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus, .form-group select:focus {
+  border: 1px solid #f76e11;                                                          /* Borda laranja ao focar */
+  outline: none;                                                                      /* Remove o outline padrão */
+}
+
+/* Estilizando a área de texto para dicas e receitas*/
+textarea {
+  height: 100px;
+}
+
+
+/* Estilização para alinhar os radio buttons e labels */
+.radio-group {
+  display: inline-block;
+  flex-direction: column;
+  margin-left: 7%;
+  margin-top: 3px;
+  margin-bottom: -42%;
+}
+
+.radio-container {
+  display: block;
+  align-items: center;
+  margin-bottom: 22%;
+  margin-left: -23%;
+  font-size: 18px;
+}
+
+
+.radio-container input[type="radio"] {
+  order: -1;                                                                /* Move o rádio para antes do texto */
+  margin-right: 2%                                                          /* Espaçamento entre o rádio e o texto */
+}
+
+
+/* Ocultar elementos por padrão do "radio"*/
+.hidden {
+  display: none;
+}
+
+
+/*frase do cabeçalho do formulário*/
+.fraseForm {
+  font-size: 26px;
+  color: #ca4507;
+  margin-bottom: 4%;
+  margin-left: 3%;
+}
+
+
+/*mensagem de erro do formulario*/
+.error-message {
+  color: rgb(187, 3, 3);
+  font-size: 16px;
+  margin-top: 22px;
+  margin-bottom: -4px;
+  display: block;
+  margin-left: 22px;
+    
+}
+
+
+/* Carrossel Container */
+
+
+.slider{
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px; /* Limita o tamanho máximo do carrossel */
+  margin-left: 3%;
+  border: 2px solid #eb6b02;
+}
+
+.slides{
+  width: 400%;
+  height: 400px;
+  display: flex;
+
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: auto;
+  background-size: cover;  
+  background-position: 50% 40%; 
+}
+
+.manual-navigation{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #005f73;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+.manual-btn.manual-btn:hover{
+  background-color: white;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -75%;
+}
+
+.navigation-auto div{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+cursor: pointer;
+transition: 3s;
+}
+
+.navigation-auto{
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center; 
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn1{
+  background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn1{
+  background-color: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn1{
+  background-color:white;
+}
+
+
+
+
+
+
+/* menu lateral */
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+.menu, .menu-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    z-index:10;  
+    overflow:hidden;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+}
+.menu li a{
+  display: inline-block;
+  text-indent: -500em;
+  height: 5em;
+  width: 5em;
+  line-height: 5em;
+  text-align:center;
+  color: #72739f;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+.menu li a:before {
+  font-family: FontAwesome;
+  text-indent: 0em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+}
+.menu li a.search:before {
+  content: "\f002";
+}
+
+.menu li a.pencil:before {
+  content: "\f040";
+}
+.menu li a.contact:before {
+  content: "\f003";
+}
+.menu li a.home:before {
+  content: "\f039";
+}
+.menu-bar li a:hover,
+.menu li a:hover,
+.menu li:first-child a {
+  background:rgb(238, 99, 7);
+  color: #fff;
+}
+.menu-bar{
+    overflow:hidden;
+    left:5em;
+    z-index:5;
+    width:0;
+    height:0;
+    transition: all 0.1s ease-in-out;
+}
+.menu-bar li a{
+  display: block;
+  height: 4em;
+  line-height: 4em;
+  text-align:center;
+  color: #72739f;
+  text-decoration:none;  
+  position: relative;
+  font-family:verdana;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+.menu-bar li:first-child a{
+    height:5em;
+    background:rgb(238, 99, 7);
+    color: #fff;    
+    line-height:5
+}
+
+
+.para{
+    color:#033f72;
+    padding-left:100px;
+    font-size:3em;
+    margin-bottom:20px;
+}
+
+.open{
+    width:10em;
+    height:100%;
+}
+
+@media all and (max-width: 500px) {
+  .container{
+      margin-top:100px;
+  }
+  .menu{
+      height:5em;
+      width:100%;
+  }
+  .menu li{
+      display:inline-block;
+  }
+  .menu-bar li a{
+      width:100%;
+  }
+  .menu-bar{
+      width:100%;
+      left:0;
+    bottom: 0;
+      height:0;
+  }
+  .open{
+      width:100%;
+      height:auto;
+  }
+  .para{
+  padding-left:5px;
+}  
+}
+@media screen and (max-height: 34em){
+.menu li,
+.menu-bar {
+  font-size:70%;
+}
+}
+@media screen and (max-height: 34em) and (max-width: 500px){
+.menu{
+      height:3.5em;
+  }
+}
+ 
+
+
+/* Media Queries para celular */
+@media only screen and (max-width: 480px) {
+  
+
+  /*formulario*/
+input[type="submit"] {
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3%;
+  width: 65px;                                                               /* Define uma largura específica para o botão */
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5%;
+  }
+
+
+
+input[type="text"],
+input[type="number"],
+textarea, .form-group select {
+  width: 87%;                                                                           /* Aumentando a largura */
+  margin: 4px 2%; 
+  font-size: 14px;
+  word-wrap: break-word; 
+  }
+
+/*mensagem de erro do formulario*/
+.error-message {
+  color: rgb(187, 3, 3);
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: block;
+  margin-left: 11px;
+  word-wrap: break-word; 
+}
+
+
+
+.escolha {
+  margin-bottom: -10%;
+  margin-left: 4%;
+  font-size: 17px;
+  flex-wrap: wrap;                                                      /* Permite que os itens quebrem linha quando não couberem mais */
+  align-items: left;
+  margin-top: 1%;
+  margin-right: 2%;
+  display: flex; 
+  word-wrap: break-word; 
+  }
+
+
+.fraseForm {
+  font-size: 20px;
+  color: #ca4507;
+  margin-bottom: 4%;
+  margin-left: 3%;
+   word-wrap: break-word; 
+  }
+
+
+.radio-container input[type="radio"], .radio-container{
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 1%;
+  display: flex; 
+  align-items: left;
+  margin-right: 2%;                                                           /* Espaçamento entre o radio button e o texto */
+  font-size: 16px;
+}
+
+
+.radio-container input[type="radio"]{
+  width: 15px;                                                                        /* Largura do ponto central */
+  height: 15px;                                                                         /* Altura do ponto central */
+  margin-bottom: 4%;
+}
+
+
+.radio-group {
+  margin-top: 2%;
+  margin-bottom: -3%;
+  display: flex;
+  flex-wrap: wrap;                                                /* Permite que os itens quebrem linha quando não couberem mais */
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+}
+
+
+.bordaForm {
+  padding: 8px 10px;
+  width:89%;
+}
+
+
+
+/*PAGINA INICIAL*/
+.logo1 {
+  width: 41px;
+  z-index: 1;
+  margin-left: 1%;
+  flex-wrap: wrap;                                                /* Permite que os itens quebrem linha quando não couberem mais */
+  justify-content: flex-start;
+  margin-bottom: 4%;
+  margin-top: 0;
+  display: flex; 
+  margin-right: 2%;  
+}
+
+
+.titulo {
+  font-size: 16px; 
+  padding: 2px; 
+  margin-top: 1%;
+  margin-left: 1%;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 3%;
+  display: flex; 
+  margin-right: 1%;  
+  
+}
+
+
+.menu-container{
+  position: absolute;
+  top: 45px;
+  right: 8px;
+  z-index: 2;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(53, 3, 3);
+  font-family: Roboto Condensed, Arial, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 5px 3px;                                                    
+  word-spacing: 5px; 
+  display: inline-block;
+}
+
+
+.bemVindo{
+  font-size: 16px;
+  text-align:justify;
+  margin-left: 3%;
+  white-space: normal;
+  line-height: 1.7;
+  margin-bottom: 3%;   
+  margin-top: 1%;
+  font-family: Arial, Helvetica, sans-serif; 
+  margin-right: 8%;
+  hyphens: auto;                                                              /* diminui as lacunas entre as palavras do texto */
+  word-wrap: break-word;                                                       /* quebra de linha*/
+}
+
+/* frases "soltas" da pagina*/
+.frase {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 6%; 
+  margin-left: 3%;
+  line-height: 1.5;
+  margin-right: 9%;
+  text-align: justify;
+  margin-top: 6%;
+  hyphens: auto; 
+  word-wrap: break-word; 
+}
+
+
+.clique {
+  margin-left: 3%;
+  font-size: 16px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5%;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-right: 9%;
+  word-wrap: break-word; 
+}
+
+
+/*BOTÕES */
+/*botão para musicas no Youtube e para o formulário*/
+.button1 { 
+  text-decoration: none;                                               
+  padding: 8px 15px;                                                  
+  background-color: #f76e11; 
+  color: #fff;
+  border-radius: 5px;                                                   
+  display: inline-block;                                                /* Garante que o botão se comporte como um elemento de bloco */
+  font-size: 14px;
+  margin-bottom: 8px;                                                  
+  margin-left: 3%;
+}
+
+.creditosImg{
+  margin-left: 3%;
+  font-size: 14px;
+  text-decoration: none;
+  float: none; 
+  text-align: center; 
+  margin: 10px auto;                                                      /* Adiciona espaçamento acima e abaixo dos créditos */
+  font-size: 15px;
+  display: block;   
+  word-wrap: break-word; 
+}
+
+/*imagens da pagina Home*/
+.image2 {
+  float: none;                                                              
+  margin-right:8%;                                                   
+  width: 75%;
+  margin-left: 5%; 
+  margin-bottom: 40px;   
+  margin-top: 5%; 
+  height: 200px;
+  display: block;
+}
+
+ /* cor de fundo que envolve os textos da pagina Home*/
+.container-textoPrincipal{
+
+  overflow: hidden; 
+  margin-right: 2%; 
+  margin-left: 3%;
+  margin-bottom: 4%;     
+  padding: 2px;
+}
+
+
+  /*imagem e texto sobre a historia da culinaria*/
+.card p{
+  overflow: hidden;                                                    
+  margin-right: 4%;                                                    
+  margin-left: 2%;
+  margin-bottom: 7%;     
+  margin-top: 16px;
+  line-height: 1.5;
+  word-wrap: break-word; 
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: left;
+  hyphens: auto; 
+  text-align: justify;
+  }
+  
+
+  
+/*tutulos dos textos */
+h1 {
+
+  margin-left: 4%;                          
+  text-align: left;                                                 
+  font-size: 18px;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px;
+  margin-bottom: 4%; 
+  margin-right: 14%;
+  margin-top: 7%;   
+  word-wrap: break-word; 
+  }
+
+
+/*CRIADO POR..*/
+.footer-content {
+  background-color: #f76e11;
+  padding: 3px 0;                                          
+  text-align: center;
+  width: 100%;
+}
+
+.criado {
+  color: #fff; 
+  display: inline-block; 
+  vertical-align: middle;                                             
+  margin: 0 auto;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-right: 8px;
+  word-wrap: break-word; 
+}
+
+
+.contato{
+  font-size: 14px;
+  margin-left: 47px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -6%;
+  margin-top: 5%;
+  font-weight: bolder;
+}
+
+  /*Linkedin*/
+.linkedin {
+  color: #240cac;
+  width: 22px;                                                             
+  height: 22px;                                                            
+  margin-bottom: 4%;
+  margin-right: -3px;
+  display: inline-block; 
+  margin: 0 auto;                                                  
+  margin-left: 49px;
+  margin-top: 1%;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+
+  }
+
+
+.github {
+  color: black;
+  width: 22px;
+  height: 22px; 
+  margin-bottom: 4%;
+  margin-left: 5px;
+  margin-top: 2%;
+  display: inline-block; 
+  margin-right: 12px;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+
+  }
+
+
+.email{
+  color: black;
+  width: 22px;
+  height: 23px; 
+  margin-bottom: 4%;
+  margin-top: 1%;
+  display: inline-block; 
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+  margin: 0; 
+}
+
+
+.imagemInicial,
+.imagemReceitas,
+.imagemDicas,
+.imagemLocal,
+.imagemForm {
+  height: 70px;                                                                   /* Reduzindo a altura das imagens */
+  width: 100%;
+}
+  
+
+
+/* PAGINA DE DICAS*/
+.video iframe { 
+  width: 85%; 
+  height: 210px; 
+  object-fit: cover;                                                        /* ajusta o vídeo dentro da área especificada */
+  margin-left: 3%;
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+
+/*texto e layout das dicas*/
+.asDicas {
+  background: #e5c89b;
+  display: inline-table;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 2%;
+  width: 90%; 
+  word-wrap: break-word; 
+}
+
+
+/* PAGINA RECEITA*/
+.subtituloReceitas {
+  overflow: hidden;                                                    
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-left: 3%;
+  margin-bottom: 5%;
+}
+
+
+/*imagem das receitas*/
+.imgAreceita {
+  float: none;                                                              
+  margin-right:8%;                                                   
+  margin-top: 5%; 
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left: 2%;
+  width:72%; 
+  display: block;
+}
+
+
+.receita{ 
+  margin-bottom: 10px; 
+  padding: 14px;
+  border-radius: 5px;
+  background:#e5c89b;
+  margin-left: 3%;
+  width: 95%;
+}
+
+/*lista do preparo das receitas */
+.preparo{
+  font-size: 14px;
+  margin-left: -4%;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  margin-top: 7%;
+  padding: 0; 
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word; 
+}
+
+/* lista de ingredientes das receitas */
+.ingredientes{
+  font-size: 14px;
+  margin-left: 4%;
+  margin-right: 3%;
+  word-wrap: break-word; 
+}
+
+
+/*botão retratil das receitas e das dicas */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  margin-left: 2%;
+  font-size: 14px;
+}
+
+
+/*PAGINA LOCAL */
+.mapa iframe {
+  margin-left: 3%;
+  margin-bottom: 3%; 
+  width: 80%; 
+  height: 200px;
+  float: none;                                                               
+  margin-top: 6%; 
+  margin-bottom: 16px;
+  display: block;
+  margin-right:8%;                                                   
+}
+
+.slider {
+  width: 100%;
+  height: 250px; /* Ajustando a altura para telas pequenas */
+}
+
+.slides {
+  width: 400%; /* Mantendo o total das imagens no carrossel */
+}
+
+.slide {
+  width: 100%; /* Cada imagem ocupa toda a largura da tela */
+}
+
+.slide img {
+  width: 100%; /* A imagem ocupa 100% da largura da tela */
+  height: auto;
+}
+
+.manual-navigation {
+  width: 100%;
+  margin-top: -40px;
+}
+
+.manual-btn {
+  padding: 3px;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.navigation-auto {
+  width: 100%;
+  margin-top: 200px; /* Ajuste para o posicionamento das setas */
+}
+}
+
+
+
+
+
+/* Media Queries para Modo Paisagem e Tablet */
+@media only screen and (min-width: 481px) and  (max-width: 768px) {
+
+ /*formulario*/
+input[type="submit"] {
+  margin-left: 3%;
+  font-size: 16px; 
+  padding: 8px 2px; 
+  align-items: left;
+  margin-bottom: 1%;
+  width: 63px;
+}
+  
+  
+input[type="text"],
+input[type="number"],
+textarea, .form-group select  {
+  width: 80%;                                                                           /* Aumentando a largura */
+  margin: 4px 2%; 
+  font-size: 14px;
+}
+ 
+
+/*mensagem de erro do formulario*/
+.error-message {
+  color: rgb(187, 3, 3);
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: block;
+  margin-left: 14px;
+  word-wrap: break-word; 
+}
+  
+.escolha {
+  margin-bottom: -10%;
+  margin-left: 4%;
+  font-size: 17px;
+  flex-wrap: wrap;                                                        /* Permite que os itens quebrem linha quando não couberem mais */
+  align-items: left;
+  margin-top: 1%;
+  margin-right: 2%;
+  display: flex; 
+}
+  
+  
+.fraseForm {
+  font-size: 20px;
+  color: #ca4507;
+  margin-bottom: 4%;
+  margin-left: 3%;
+}
+  
+  
+.radio-container input[type="radio"], .radio-container{
+  margin-bottom: 2%;
+  margin-top: 3%;
+  margin-left: 1%;
+  display: flex; 
+  align-items: left;
+  margin-right: 2%;                                                               /* Espaçamento entre o radio button e o texto */
+  font-size: 16px;
+}
+
+  
+.radio-container input[type="radio"]{
+  width: 15px;                                                                            /* Largura do ponto central */
+  height: 15px;                                                                           /* Altura do ponto central */
+  margin-bottom: 4%;
+}
+  
+  
+.radio-group {
+  margin-top: 4%;
+  margin-bottom: -4%;
+  display: flex; 
+  flex-wrap: wrap;                                                        
+  justify-content: flex-start;                                            /* Alinha os itens no início do container (esquerda) */
+}
+  
+  
+.bordaForm {
+  padding: 8px 10px;
+  width: 80%;
+}
+  
+
+/* PAGINA HOME */
+.logo1 {
+  width: 45px;
+  border-radius: 47% 47% 2% 22% ;                                           
+  margin-right: 8px;                                                  
+  z-index: 1;
+  margin-bottom: 8px;
+  margin-left: 2%;
+
+}
+
+.titulo {
+  font-size: 20px; 
+  padding: 0; 
+  margin-top: 27px;
+  position:absolute;
+  z-index: 1;
+}
+
+
+.menu-container{
+  position: absolute;
+  top: 45px;
+  right: 8px;
+  z-index: 2;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(53, 3, 3);
+  font-family: Roboto Condensed, Arial, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 5px 9px;                                                    
+  display: inline-block;
+}
+
+
+.bemVindo{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 3%;
+  white-space: normal;
+  line-height: 1.7;
+  margin-bottom: 3%;   
+  margin-top: 1%;
+  font-family: Arial, Helvetica, sans-serif; 
+  margin-right: 11%;
+  hyphens: auto;                                                              /* diminui as lacunas entre as palavras do texto */
+}
+
+
+.frase {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 6%; 
+  margin-left: 3%;
+  line-height: 1.7;
+  margin-right: 11%;
+  text-align: justify;
+  margin-top: 5%;
+  hyphens: auto; 
+}
+
+
+.clique {
+  margin-left: 3%;
+  font-size: 18px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5%;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-right: 9%;
+}
+
+
+/*BOTÕES */
+/*botão para musicas no Youtube e para o formulário*/
+.button1 { 
+  text-decoration: none;                                                
+  padding: 8px 15px;                                                   
+  background-color: #f76e11; 
+  color: #fff;
+  border-radius: 5px;                                                  
+  display: inline-block;                                               
+  font-size: 16px;
+  margin-bottom: 8px;                                                 
+  margin-left: 3%;
+}
+
+
+.creditosImg{
+  margin-left: 3%;
+  font-size: 16px;
+  text-decoration: none;
+  float: none; 
+  text-align: center; 
+  display: block;   
+  margin-top: -30px;
+  margin-bottom: 2px;
+}
+
+
+/*imagens da pagina Home*/
+.image2 {
+  float: none;                                                             
+  margin-right:8%;                                                   
+  width: 259px;
+  margin-left: 5%; 
+  margin-bottom: 40px;   
+  margin-top: 5%; 
+  height: 220px;
+  display: block;
+}
+
+
+ /* cor de fundo que envolve os textos da pagina Home*/
+.container-textoPrincipal{
+ 
+  overflow: hidden; 
+  margin-right: 9%; 
+  margin-left: 3%;
+  margin-bottom: 4%;     
+  padding: 3px;
+}
+
+
+/*imagem e texto sobre a historia da culinaria*/
+.card p{
+  overflow: hidden;                                                    
+  margin-right: 2%;                                                    
+  margin-left: 2%;
+  margin-bottom: 3%;     
+  margin-top: 12px;
+  line-height: 1.5;
+  word-wrap: break-word; 
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: left;
+  hyphens: auto; 
+  text-align: justify;
+  }
+  
+  
+/*titulos dos textos */
+h1 {
+ 
+  margin-left: 3%;                          
+  text-align: left;                                                 
+  font-size: 20px;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px;
+  margin-bottom: 2%; 
+  margin-right: 18%;
+  margin-top: 7%;   
+}
+
+
+/*CRIADO POR..*/
+.footer-content {
+  background-color: #f76e11;
+  padding: 3px 0;                                          
+  text-align: center;
+  width: 100%;
+}
+
+
+.criado {
+  color: #fff; 
+  display: inline-block; 
+  vertical-align: middle;                                             
+  margin: 0 auto;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.contato{
+  font-size: 16px;
+  margin-left: 49px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -1%;
+  margin-top: 4%;
+  font-weight: bolder;
+}
+
+
+/*Linkedin*/
+.linkedin {
+  color: #240cac;
+  width: 29px;                                                             
+  height: 29px;                                                            
+  margin-bottom: 4%;
+  margin-right: -3px;
+  display: inline-block; 
+  margin: 0 auto;                                                  
+  margin-left: 49px;
+  margin-top: 0;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+ }
+  
+  
+.github {
+  color: black;
+  width: 29px;
+  height: 29px; 
+  margin-bottom: 4%;
+  margin-left: 2%;
+  margin-top: 0;
+  display: inline-block; 
+  margin-right: 15px;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+}
+  
+  
+.email{
+  color: black;
+  width: 29px;
+  height: 29px; 
+  margin-bottom: 4%;
+  margin-top: 0;
+  display: inline-block; 
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+  margin: 0; 
+}
+
+.imagemInicial,
+.imagemReceitas,
+.imagemDicas,
+.imagemLocal,
+.imagemForm {
+  height: 80px;                                                                   
+  width: 100%;
+}
+  
+.faixa {
+  width: 100%;
+  padding: 8px; 
+}
+
+ 
+/* PAGINA DE DICAS*/
+.video iframe { 
+  width: 70%; 
+  height: 285px; 
+  object-fit: cover;                                                        /* ajusta o vídeo dentro da área especificada */
+  margin-left: 3%;
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
+
+/*texto e layout das dicas*/
+.asDicas {
+  background: #e5c89b;
+  display: inline-table;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 3%;
+  width: 50%; 
+}
+
+
+/* PAGINA RECEITA*/
+.subtituloReceitas {
+  font-size: 22px;
+  margin-left: 3%;
+  margin-bottom: 4%;
+}
+
+
+/*imagem das receitas*/
+.imgAreceita {
+  margin-right:8%;                                                   
+  margin-top: 5%; 
+  height: 170px;
+  margin-bottom: 10px;
+  margin-left: 3%;
+  width:252px; 
+}
+
+
+.receita{ 
+  margin-bottom: 12px; 
+  padding: 14px;
+  background:#e5c89b;
+  width: 85%;
+}
+
+/*lista do preparo das receitas */
+.preparo{
+  font-size: 16px;
+  margin-left: -1%;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  padding: 0; 
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* lista de ingredientes das receitas */
+.ingredientes{
+  font-size: 16px;
+  margin-left: 3%;
+}
+
+
+/*botão retratil das receitas e das dicas */
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  margin-left: 3%;
+  font-size: 16px;
+}
+
+
+/*PAGINA LOCAL */
+.mapa iframe {
+  margin-left: 3%;
+  width:85%; 
+  height: 220px;
+  float: none;                                                               
+  margin-top: 3%; 
+  margin-bottom: 16px;
+  margin-right:8%;                                                   
+}
+
+
+.slider {
+  width: 80%;
+  height: 300px; /* Ajuste da altura */
+}
+
+.slides {
+  width: 400%;
+}
+
+.slide {
+  width: 25%;
+}
+
+.slide img {
+  width: 100%; /* A imagem ocupa toda a largura do slide */
+  height: auto;
+}
+
+.manual-navigation {
+  width: 80%;
+  margin-top: -40px;
+}
+
+.manual-btn {
+  padding: 5px;
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.navigation-auto {
+  width: 80%;
+  margin-top: 250px;
+}
+}
+
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+ 
+  /*formulario*/
+input[type="submit"] {
+  margin-left: 3%;
+  font-size: 18px; 
+  padding: 8px 4px; /* Ajustando o padding */
+  align-items: left;
+  margin-bottom: 1%;
+  width: 62px;
+}
+  
+  
+input[type="text"],
+input[type="number"],
+textarea, .form-group select  {
+  width: 80%; /* Aumentando a largura */
+  margin: 4px 2%; 
+  font-size: 16px;
+}
+  
+
+/*mensagem de erro do formulario*/
+.error-message {
+  color: rgb(187, 3, 3);
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: block;
+  margin-left: 14px;
+  word-wrap: break-word; 
+}
+  
+.escolha {
+  margin-bottom: -10%;
+  margin-left: 4%;
+  font-size: 17px;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha quando não couberem mais */
+  align-items: left;
+  margin-top: 1%;
+  margin-right: 2%;
+  display: flex; 
+}
+  
+  
+.fraseForm {
+  font-size: 20px;
+  color: #ca4507;
+  margin-bottom: 4%;
+  margin-left: 3%;
+}
+  
+  
+.radio-container input[type="radio"], .radio-container{
+  margin-bottom: 2%;
+  margin-top: 3%;
+  margin-left: 1%;
+  display: flex; 
+  align-items: left;
+  margin-right: 2%; /* Espaçamento entre o radio button e o texto */
+  font-size: 16px;
+}
+
+  
+.radio-container input[type="radio"]{
+  width: 15px; /* Largura do ponto central */
+  height: 15px; /* Altura do ponto central */
+  margin-bottom: 4%;
+}
+  
+  
+.radio-group {
+  margin-top: 4%;
+  margin-bottom: -4%;
+  display: flex; /* Torna o container um flex container */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha quando não couberem mais */
+  justify-content: flex-start; /* Alinha os itens no início do container (esquerda) */
+}
+  
+  
+.bordaForm {
+  padding: 8px 10px;
+  width: 80%;
+}
+  
+
+/* PAGINA HOME */
+.logo1 {
+  width: 67px;
+  margin-right: 10px; 
+  border-radius: 47% 47% 2% 22% ;                                           
+  z-index: 1;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  height: auto;                                                             /* Altura automática para manter a proporção */
+}
+
+
+.titulo {
+  font-size: 30px; 
+  padding: 0; 
+  margin-top: 42px;
+  position:absolute;
+  z-index: 1;
+}
+
+
+.menu-container{
+  position: absolute;
+  top: 80px;
+  right: 12px;
+  z-index: 2;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(53, 3, 3);
+  font-family: Roboto Condensed, Arial, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 28px;
+  padding: 5px 10px;                                                    
+  word-spacing: 9px; 
+  display: inline-block;
+}
+
+
+.bemVindo{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 3%;
+  white-space: normal;
+  line-height: 1.7;
+  margin-bottom: 3%;   
+  margin-top: 1%;
+  font-family: Arial, Helvetica, sans-serif; 
+  margin-right: 12%;
+  hyphens: auto;                                                              /* diminui as lacunas entre as palavras do texto */
+}
+
+
+.frase {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 4%; 
+  margin-left: 3%;
+  line-height: 1.7;
+  margin-right: 10%;
+  text-align: justify;
+  margin-top: 5%;
+  hyphens: auto; 
+}
+
+
+.clique {
+  margin-left: 3%;
+  font-size: 18px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5%;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-right: 9%;
+}
+
+
+
+/*BOTÕES */
+/*botão para musicas no Youtube e para o formulário*/
+.button1 { 
+  text-decoration: none;                                                
+  padding: 8px 15px;                                                   
+  background-color: #f76e11; 
+  color: #fff;
+  border-radius: 5px;                                                  
+  display: inline-block;                                               
+  font-size: 18px;
+  margin-bottom: 8px;                                                 
+  margin-left: 3%;
+}
+
+
+.creditosImg{
+  margin-left: 3%;
+  font-size: 16px;
+  text-decoration: none;
+  float: none; 
+  text-align: center; 
+  margin: 10px auto;                                                      
+  font-size: 15px;
+  display: block;   
+}
+
+
+/*imagens da pagina Home*/
+.image2 {
+  float: left;                                                             
+  margin-right:2%;                                                   
+  width: 30%;
+  margin-left: 3%; 
+  margin-bottom: 40px;   
+  margin-top: 2%; 
+  height: 365px;
+  display: block;
+}
+
+
+ /* cor de fundo que envolve os textos da pagina Home*/
+.container-textoPrincipal{
+ 
+  overflow: hidden; 
+  margin-right: 2%; 
+  margin-left: 3%;
+  margin-bottom: 4%;     
+  padding: 3px;
+}
+
+
+/*imagem e texto sobre a historia da culinaria*/
+.card p{
+  overflow: hidden;                                                    
+  margin-right: 6%;                                                    
+  margin-left: 2%;
+  margin-bottom: 3%;     
+  margin-top: 1%;
+  line-height: 1.5;
+  word-wrap: break-word; 
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: left;
+  hyphens: auto; 
+  text-align: justify;
+}
+  
+/*titulos dos textos */
+h1 {
+ 
+  margin-left: 3%;                          
+  text-align: left;                                                 
+  font-size: 20px;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px;
+  margin-bottom: 2%; 
+  margin-right: 25%;
+  margin-top: 7%;   
+}
+
+
+/*CRIADO POR..*/
+.footer-content {
+  background-color: #f76e11;
+  padding: 3px 0;                                          
+  text-align: center;
+  width: 100%;
+
+}
+
+
+.criado {
+  color: #fff; 
+  display: inline-block; 
+  vertical-align: middle;                                             
+  margin: 0 auto;                                                  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.contato{
+  font-size: 18px;
+  margin-left: 63px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -1%;
+  margin-top: 3%;
+  font-weight: bolder;
+}
+
+
+/*Linkedin*/
+.linkedin {
+  color: #240cac;
+  width: 33px;                                                             
+  height: 33px;                                                            
+  margin-bottom: 4%;
+  margin-right: -3px;
+  display: inline-block; 
+  margin: 0 auto;                                                  
+  margin-left: 63px;
+  margin-top: 0;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+ }
+  
+  
+.github {
+  color: black;
+  width: 33px;
+  height: 33px; 
+  margin-bottom: 4%;
+  margin-left: 2%;
+  margin-top: 0;
+  display: inline-block; 
+  margin-right: 22px;
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+}
+  
+  
+.email{
+  color: black;
+  width: 33px;
+  height: 33px; 
+  margin-bottom: 3%;
+  margin-top: 0;
+  display: inline-block; 
+  align-items: left;
+  justify-content: flex-start;                                        /* Alinha os itens no início do container */
+  margin: 0; 
+}
+
+.imagemInicial,
+.imagemReceitas,
+.imagemDicas,
+.imagemLocal,
+.imagemForm {
+  height: 120px;
+  width: 100%;
+}
+  
+
+.faixa {
+  width: 100%;
+  padding: 8px; 
+}
+
+ 
+ /* PAGINA DE DICAS*/
+.video iframe { 
+  width: 70%; 
+  height: 360px; 
+  object-fit: cover;                                                        /* ajusta o vídeo dentro da área especificada */
+  margin-left: 2%;
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
+
+/*texto e layout das dicas*/
+.asDicas {
+  background: #e5c89b;
+  display: inline-table;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 3%;
+  margin-right: 3px;
+  width: 29%; 
+  text-align: justify;
+  hyphens: auto;
+}
+ 
+
+/* PAGINA RECEITA*/
+.subtituloReceitas {
+  font-size: 24px;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+
+/*imagem das receitas*/
+.imgAreceita {
+  margin-right:8%;                                                   
+  margin-top: 5%; 
+  margin-bottom: 10px;
+  margin-left: 3%;
+  width:252px; 
+  display: block;
+  height: 170px;
+}
+
+.receita{ 
+  margin-bottom: 12px; 
+  padding: 14px;
+  background:#e5c89b;
+  width: 80%;
+}
+
+
+/*lista do preparo das receitas */
+.preparo{
+  font-size: 16px;
+  margin-left: 1%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+  margin-top: 4%;
+  padding: 0; 
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+}
+
+
+/* lista de ingredientes das receitas */
+.ingredientes{
+  font-size: 16px;
+  margin-left: 3%;
+}
+
+
+/*botão retratil das receitas e das dicas */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 3%;
+  font-size: 18px;
+}
+
+ 
+ /*PAGINA LOCAL */
+.mapa iframe {
+  margin-left: 3%;
+  width:75%; 
+  height: 260px;
+  float: none;                                                               
+  margin-top: 1%; 
+  margin-bottom: 16px;
+  margin-right: 8%;                                                   
+}
+
+.slider {
+  width: 70%;
+  height: 350px; /* Ajuste da altura */
+}
+
+.slides {
+  width: 400%;
+}
+
+.slide {
+  width: 25%;
+}
+
+.slide img {
+  width: 100%; /* Imagem ajustada para a largura do slide */
+  height: auto;
+}
+
+.manual-navigation {
+  width: 70%;
+  margin-top: -40px;
+}
+
+.manual-btn {
+  padding: 6px;
+  font-size: 16px;
+  margin-right: 35px;
+}
+
+.navigation-auto {
+  width: 70%;
+  margin-top: 300px;
+}
+}
